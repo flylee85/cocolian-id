@@ -1,2 +1,6 @@
-# cocolian-id
-为各个业务提供一个高效的、规则可定制的ID发生器，支持批量ID生成。 使用Redis数据库，提供Id发生器的服务端和客户端。 
+## 一、功能
+
+cocolian-id模块是一个基础功能模块，为其他业务提供id发生器支持。包括如下子模块：
+1. cocolian-id-generator：id发生器，这是一个RPC服务； 
+2. cocolian-id-facade： id发生器SDK， 提供给需要ID服务的模块使用，对cocolian-id-generator的客户端进行封装，提供实现无关的接口。 
+3. cocolian-id-redis： 支持cocolian-id-generator的redis镜像。 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<parent>
+		<artifactId>cocolian-id</artifactId>
+		<groupId>org.cocolian</groupId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>cocolian-id-facade</artifactId>
+	<packaging>jar</packaging>
+	<dependencies>
+	
+	</dependencies>
+	<developers>
+		<developer>
+			<id>shamphone</id>
+			<name>凤凰牌老熊</name>
+			<email>shamphone@gmail.com</email>
+			<organization>Cocolian Software, Inc.</organization>
+			<organizationUrl>http://www.cocolian.com</organizationUrl>
+		</developer>
+	</developers>
+	<scm>
+		<url>https://github.com/cocolian/cocolian-id-facade</url>
+		<connection>scm:git:ssh://git@github.com:cocolian/cocolian-id-facade.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:cocolian/cocolian-id-facade.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>		
+</project>
