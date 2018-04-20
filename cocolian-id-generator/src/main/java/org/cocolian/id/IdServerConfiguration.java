@@ -1,4 +1,4 @@
-package org.jigsaw.payment.id;
+package org.cocolian.id;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,9 +72,5 @@ public class IdServerConfiguration {
 		return new RedisTemplate(shardedJedisPool);
 	}
 	
-	@Bean
-	public ShardingByUserId shardingByUserId(){
-		return ShardingByUserId.newBuilder().build();
-	}
 
 }

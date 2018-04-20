@@ -1,0 +1,24 @@
+syntax = "proto2";
+option java_package = "org.cocolian.rpc";
+
+/**
+ * 生成订单ID和订单号；
+ *
+**/
+message GenerateIdRequest {     
+    optional string user_name = 1;//用户名
+    optional string password = 2;//密码
+	
+	optional int32 entity_type = 3; //实体类型
+
+    optional int64 count = 4;//要生成的ID的数量
+}
+
+/**
+ * 生成Id列表
+ *
+**/
+message  GenerateIdResponse {
+    repeated int64  ids = 1;
+}
+

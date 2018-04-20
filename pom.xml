@@ -128,9 +128,6 @@
 			<email>shamphone@gmail.com</email>
 			<organization>Cocolian Software, Inc.</organization>
 			<organizationUrl>http://www.cocolian.com</organizationUrl>
-			<roles>
-				<role>Project Leader</role>
-			</roles>
 		</developer>
 	</developers>
 	<scm>

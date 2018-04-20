@@ -13,16 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jigsaw.payment.id;
+package org.cocolian.id.rpc;
 
-import org.jigsaw.payment.id.rpc.GenerateAccountIdController;
-import org.jigsaw.payment.id.rpc.GeneratePayOrderIdController;
-import org.jigsaw.payment.model.AccountTitle;
-import org.jigsaw.payment.model.AccountType;
-import org.jigsaw.payment.rpc.IdService.GenerateAccountIdRequest;
-import org.jigsaw.payment.rpc.IdService.GenerateAccountIdResponse;
-import org.jigsaw.payment.rpc.IdService.GeneratePayOrderIdRequest;
-import org.jigsaw.payment.rpc.IdService.GeneratePayOrderIdResponse;
+
+import org.cocolian.id.rpc.GenerateIdController;
+import org.cocolian.rpc.IdService.GenerateIdRequest;
+import org.cocolian.rpc.IdService.GenerateIdResponse;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,29 +32,26 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * @author shamphone@gmail.com
  * @version 1.0.0
- * @date 2017年8月22日
+ * @date 2017年8月16日
  */
 @RunWith(SpringRunner.class)
 @ActiveProfiles("dev")
 @SpringBootTest(classes = TestConfiguration.class, webEnvironment = WebEnvironment.NONE)
-public class TestGenerateAccountIdController {
+public class TestGenerateIdController {
+
 	@Autowired
-	@Qualifier("generateAccountId")
-	private GenerateAccountIdController controller;
+	@Qualifier("generateId")
+	private GenerateIdController controller;
 
 	@Test
 	public void testGen() throws Exception {		
-		long uid = System.currentTimeMillis();
-		GenerateAccountIdRequest.Builder request = GenerateAccountIdRequest
+		GenerateIdRequest.Builder request = GenerateIdRequest
 				.newBuilder();
 		request.setUserName("payment");
 		request.setPassword("123456");
-		request.setSubId(uid);
-		request.setAccountTitle(AccountTitle.PERSONAL_DEPOSIT);
-		request.setAccountType(AccountType.FOR_PERSONAL);
-		GenerateAccountIdResponse response = controller.process(request
+		request.setEntityType(1);
+		GenerateIdResponse response = controller.process(request
 				.build());
-		Assert.assertEquals(response.getAccountId() /10 %10, uid % 10);
-		Assert.assertEquals(response.getAccountId() /100 % 128, uid /10 % 128);
+		Assert.assertEquals(response.getIdsCount(), 0);
 	}
 }

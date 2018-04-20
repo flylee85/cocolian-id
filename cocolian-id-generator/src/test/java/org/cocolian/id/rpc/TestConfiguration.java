@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jigsaw.payment.id;
+package org.cocolian.id.rpc;
 
-import org.jigsaw.payment.rpc.server.RpcServerConfiguration;
+import org.cocolian.rpc.server.RpcServerConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Configuration;

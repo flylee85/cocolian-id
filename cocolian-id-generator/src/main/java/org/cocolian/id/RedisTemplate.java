@@ -1,4 +1,4 @@
-package org.jigsaw.payment.id;
+package org.cocolian.id;
 
 
 import java.util.ArrayList;
